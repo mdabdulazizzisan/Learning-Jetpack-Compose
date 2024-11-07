@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,14 +34,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(
-        text = "Hello $name!",
-        fontSize = 30.sp
-    )
-    Text(
-        text = "Second Text",
-        fontSize = 30.sp,
-    )
+    Column {
+        Text(
+            text = "Hello $name!",
+            fontSize = 30.sp
+        )
+        Text(
+            text = "Second Text",
+            fontSize = 30.sp,
+        )
+    }
+
 }
 
 @Preview(showBackground = true)
