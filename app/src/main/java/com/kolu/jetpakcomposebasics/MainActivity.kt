@@ -38,8 +38,13 @@ fun Greeting(name: String) {
         color = Color.Magenta,
         fontSize = 30.sp,
         modifier = Modifier
+            //the code runs sequentially
+            //so first the blue bg is painted
             .background(color = Color.Blue)
+            //then the padding is added
             .padding(30.dp)
+            //then the green background is painted inside the padding
+            .background(color = Color.Green)
     )
 }
 
