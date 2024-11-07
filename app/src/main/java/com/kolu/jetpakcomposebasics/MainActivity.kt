@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
             JetpakComposeBasicsTheme {
 
                     Greeting(
-                        name = "Android",
+                        name = "Android"
                     )
             }
         }
@@ -35,16 +35,11 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String) {
     Text(
         text = "Hello $name!",
-        color = Color.Magenta,
+        fontSize = 30.sp
+    )
+    Text(
+        text = "Second Text",
         fontSize = 30.sp,
-        modifier = Modifier
-            //the code runs sequentially
-            //so first the blue bg is painted
-            .background(color = Color.Blue)
-            //then the padding is added
-            .padding(30.dp)
-            //then the green background is painted inside the padding
-            .background(color = Color.Green)
     )
 }
 
