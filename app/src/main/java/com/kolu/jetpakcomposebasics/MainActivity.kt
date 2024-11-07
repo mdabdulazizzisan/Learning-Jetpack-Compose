@@ -5,10 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
@@ -34,14 +36,24 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Column {
+    Column(
+        horizontalAlignment = Alignment.End,
+        modifier = Modifier
+            .background(Color.Blue)
+            .padding(20.dp)
+    ) {
         Text(
             text = "Hello $name!",
-            fontSize = 30.sp
+            fontSize = 30.sp,
+            color = Color.White,
+            modifier = Modifier
+                .background(Color.Red)
+                .padding(5.dp)
         )
         Text(
             text = "Second Text",
             fontSize = 30.sp,
+            color = Color.LightGray
         )
     }
 
