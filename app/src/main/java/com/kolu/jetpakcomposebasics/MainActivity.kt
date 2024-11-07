@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
@@ -37,8 +38,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Column(
-        verticalArrangement = Arrangement.Center,
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.End,
         modifier = Modifier
             .background(Color.Blue)
             .padding(20.dp)
@@ -50,7 +52,7 @@ fun Greeting(name: String) {
             color = Color.White,
             modifier = Modifier
                 .background(Color.Red)
-                .padding(5.dp)
+                .padding(10.dp)
         )
         Text(
             text = "Second Text",
