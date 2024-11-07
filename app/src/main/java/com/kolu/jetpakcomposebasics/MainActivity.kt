@@ -21,22 +21,19 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpakComposeBasicsTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+
                     Greeting(
                         name = "Android",
-                        modifier = Modifier.padding(innerPadding)
                     )
-                }
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String) {
     Text(
         text = "Hello $name!",
-        modifier = modifier,
         color = Color.Magenta,
         fontSize = 30.sp
     )
