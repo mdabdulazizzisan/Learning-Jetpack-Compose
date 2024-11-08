@@ -41,13 +41,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Image(painter = painterResource(
-        id = R.drawable.ic_launcher_background),
-        contentDescription = null)
-    Icon(
-        imageVector = Icons.Default.Call,
-        contentDescription = null
-    )
+    if(name.length > 5){
+        Icon(
+            imageVector = Icons.Default.Call,
+            contentDescription = null
+        )
+    }
+
 }
 
 @Preview(showBackground = true)
