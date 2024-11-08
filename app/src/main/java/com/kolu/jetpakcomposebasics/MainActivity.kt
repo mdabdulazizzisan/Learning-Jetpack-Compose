@@ -41,6 +41,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String) {
     Column {
+        //Replacement of Horizontal recycler view
         LazyRow {
             items(10) {
                 Icon(
@@ -57,6 +58,7 @@ fun Greeting(name: String) {
                 .fillMaxWidth()
                 .height(10.dp)
         )
+        //Replacement of Vertical RecyclerView
         LazyColumn {
             items(10) {
                 Icon(
